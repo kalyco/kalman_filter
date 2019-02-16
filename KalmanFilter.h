@@ -17,7 +17,7 @@ class KalmanFilter {
 	public:
 	KalmanFilter(Vector2d x, Vector2d u, double dt, gaussian epsilon);
 	~KalmanFilter();
-  MatrixXd& operator=(const MatrixXd & other);
+	MatrixXd& operator=(const MatrixXd & other);
 
 	// void KalmanFilter::multivariateGaussian(Vector2d x, int mean, Matrix2d cov);
 	void init();
@@ -33,7 +33,7 @@ class KalmanFilter {
 
 	private:
 
-  MatrixXd A, B, C, Q, R, P, K, P0;
+	MatrixXd A, B, C, Q, R, P, K, P0;
 	double t0, t, dt; // initial t, current t, and timestep
 	int n; // num state dimensions
 	Vector2d cur_x, new_x; // Estimated state vectors
